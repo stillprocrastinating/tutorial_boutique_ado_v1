@@ -1,0 +1,5 @@
+0_documents/gitignore
+.venv
+*.sqlite3
+*.pyc
+__pycache__
