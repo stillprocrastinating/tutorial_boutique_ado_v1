@@ -24,9 +24,9 @@
   <body>
 
     <header class="container-fluid fixed-top">
-      <div class="row">
+      <div class="bg-white d-lg-flex d-none pt-lg-2 row" id="topnav">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-          <a href="{% url 'home' %}" class="nav-link main-logo-link">
+          <a class="nav-link main-logo-link" href="{% url 'home' %}">
             <h2 class="logo-font my-0 text-black">
               <strong>Boutique</strong> Ado
             </h2>
@@ -47,8 +47,56 @@
         </form>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled my-0 text-center text-lg-right">
-            <li class="dropdown list-inline-item"></li>
-            <li class="list-inline-item"></li>
+            <li class="dropdown list-inline-item">
+              <a aria-expanded="false" aria-haspopup="true" class="nav-link text-black" data-toggle="dropdown" href="#" id="user-options">
+                <div class="text-center">
+                  <div>
+                    <i class="fa-lg fa-user fas"></i>
+                  </div>
+                  <p class="my-0">
+                    My account
+                  </p>
+                </div>
+              </a>
+              <div aria-labelledby="user-options" class="border-0 dropdown-menu">
+                {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                    <a class="dropdown-item" href="">
+                      Product management
+                    </a>
+                    <a class="dropdown-item" href="">
+                      My profile
+                    </a>
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">
+                      Logout
+                    </a>
+                  {% else %}
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">
+                      Register
+                    </a>
+                    <a class="dropdown-item" href="{% url 'account_login' %}">
+                      Login
+                    </a>
+                  {% endif %}
+                {% endif %}
+              </div>
+            </li>
+            <li class="list-inline-item">
+              <a class="nav-link {% if grand_total %} font-weight-bold text-info {% else %} text-black {% endif %}" href="">
+                <div class="text-center">
+                  <div>
+                    <i class="fa-lg fa-shopping-bag fas"></i>
+                  </div>
+                  <p class="my-0">
+                    {% if grand_total %}
+                      £{{ grand_total|floatformat:2 }}
+                    {% else %}
+                      £0.00
+                    {% endif %}
+                  </p>
+                </div>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
