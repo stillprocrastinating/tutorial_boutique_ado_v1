@@ -105,6 +105,22 @@
           </ul>
         </div>
       </div>
+      <div class="bg-white row">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <button aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#main-nav" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          {% includes 'includes/mobile-top-header.html' %}
+          {% includes 'includes/main-nav.html' %}
+        </nav>
+      </div>
+      <div class="row text-center" id="delivery-banner">
+        <div class="bg-black col text-white">
+          <h4 class="logo-font my-1">
+            Free delivery on orders over £{{ free_shipping_threshold }}!
+          </h4>
+        </div>
+      </div>
     </header>
 
     {% if messages %}
