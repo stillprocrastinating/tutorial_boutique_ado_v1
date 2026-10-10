@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/base/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #555;
     font-family: 'Lato';
