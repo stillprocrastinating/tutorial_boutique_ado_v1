@@ -42,18 +42,18 @@
                     Product management
                 </a>
             {% endif %}
-            <!-- <a class="dropdown-item" href="{% 'profile' %}"> -->
+            <!-- <a class="dropdown-item" href="dj url 'profile' dj"> -->
             <a class="dropdown-item" href="">
                 My profile
             </a>
-            <a class="dropdown-item" href="{% 'account_logout' %}">
+            <a class="dropdown-item" href="{% url 'account_logout' %}">
                 Logout
             </a>
         {% else %}
-            <a class="dropdown-item" href="{% 'account_signup' %}">
+            <a class="dropdown-item" href="{% url 'account_signup' %}">
                 Signup
             </a>
-            <a class="dropdown-item" href="{% 'account_login' %}">
+            <a class="dropdown-item" href="{% url 'account_login' %}">
                 Login
             </a>
         {% endif %}
