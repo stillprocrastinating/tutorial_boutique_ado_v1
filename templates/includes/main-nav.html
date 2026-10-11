@@ -24,16 +24,16 @@
                 Clothing
             </a>
             <div aria-labelledby="clothing-link" class="border-0 dropdown-menu">
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=activewear,essentials">
                     Activewear &amp; essentials
                 </a>
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=jeans">
                     Jeans
                 </a>
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=shirts">
                     Shirts
                 </a>
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=activewear,essentials,jeans,shirts">
                     All clothing
                 </a>
             </div>
@@ -43,13 +43,13 @@
                 Homeware
             </a>
             <div aria-labelledby="homeware-link" class="border-0 dropdown-menu">
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=bed_bath">
                     Bed &amp; bath
                 </a>
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=kitchen_dining">
                     Kitchen &amp; dining
                 </a>
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=bed_bath,kitchen_dining">
                     All homeware
                 </a>
             </div>
@@ -59,16 +59,16 @@
                 Special offers
             </a>
             <div aria-labelledby="specials-link" class="border-0 dropdown-menu">
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=new_arrivals">
                     New arrivals
                 </a>
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=deals">
                     Deals
                 </a>
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=clearance">
                     Clearance
                 </a>
-                <a class="dropdown-item" href="">
+                <a class="dropdown-item" href="{% url 'products' %}?category=new_arrivals,deals,clearance">
                     All specials
                 </a>
             </div>
