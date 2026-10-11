@@ -5,7 +5,7 @@
 | Done | ID | User | Goal | Justification |
 | - | - | - | - | - |
 | :ballot_box_with_check: | 1 | Shopper | View a list of products | Select some to purchase |
-|| 2 | Shopper | View individual product details | Identify the price, description, product rating, product image, and available sizes |
+| :ballot_box_with_check: | 2 | Shopper | View individual product details | Identify the price, description, product rating, product image, and available sizes |
 | :ballot_box_with_check: | 3 | Shopper | Quickly identify deals, clearance items, and special offers | Take advantage of special savings on products I'd like to purchase |
 || 4 | Shopper | Easily view the total of my purchases at any time | Avoid spending too much |
 

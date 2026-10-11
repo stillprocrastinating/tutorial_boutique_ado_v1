@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
+
 {% endblock page_header %}
+
 
 {% block content %}
 
@@ -19,7 +23,7 @@
             </h1>
             <div class="my-5">
                 <h4>
-                    <a href="" class="btn btn-lg rounded-0 shop-now-button text-uppercase py-3">
+                    <a href="{% url 'products' %}" class="btn btn-lg rounded-0 shop-now-button text-uppercase py-3">
                         Shop now
                     </a>
                 </h4>
