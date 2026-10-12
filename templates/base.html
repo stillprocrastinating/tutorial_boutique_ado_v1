@@ -89,7 +89,7 @@
             </div>
           </li>
           <li class="list-inline-item">
-            <a class="nav-link {% if grand_total %} font-weight-bold text-info {% else %} text-black {% endif %}" href="">
+            <a class="nav-link {% if grand_total %} font-weight-bold text-info {% else %} text-black {% endif %}" href="{% url 'view_bag' %}">
               <div class="text-center">
                 <div>
                   <i class="fa-lg fa-shopping-bag fas"></i>
@@ -119,7 +119,7 @@
     <div class="row text-center" id="delivery-banner">
       <div class="bg-black col text-white">
         <h4 class="logo-font my-1">
-          Free delivery on orders over £{{ free_shipping_threshold }}!
+          Free delivery on orders over £{{ free_delivery_threshold }}!
         </h4>
       </div>
     </div>
