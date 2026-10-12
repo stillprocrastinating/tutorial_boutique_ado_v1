@@ -113,13 +113,19 @@
                                         {% if product.category %}
                                             <p class="mb-0 mt-1 small">
                                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fa-tag fas mr-1"></i>{{ product.category.friendly_name }}
+                                                    <i class="fa-tag fas mr-1 noi">
+                                                        <svg fill-opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" color-rendering="auto" color-interpolation="auto" text-rendering="auto" stroke="black" stroke-linecap="square" stroke-miterlimit="10" shape-rendering="auto" stroke-opacity="1" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" xmlns="http://www.w3.org/2000/svg" font-family="'Dialog'" font-style="normal" stroke-linejoin="miter" font-size="12px" stroke-dashoffset="0" image-rendering="auto"><!--Unicode Character 'LABEL' (U+1F3F7)--><defs id="genericDefs"/><g><g><path d="M266.0625 365.0625 L112.6406 365.0625 L78.4688 343.4062 Q69.4688 354.7969 50.9062 359.5781 Q64.6875 373.0781 84.2344 376.875 L83.5312 381.375 Q60.0469 376.875 44.4375 360.8438 Q36.7031 362.8125 21.2344 365.0625 L21.0938 360.7031 Q28.8281 360.2812 41.7656 357.3281 Q21.9375 335.3906 21.9375 308.6719 Q21.9375 292.2188 27.2812 280.2656 Q34.3125 264.375 48.6562 264.375 Q61.5938 264.375 71.7188 272.5312 L112.6406 246.7969 L266.0625 246.7969 L266.0625 365.0625 ZM262.125 360.9844 L262.125 250.875 L113.7656 250.875 L74.9531 275.3438 Q82.5469 282.6562 86.2031 291.2344 Q88.3125 290.3906 91.5469 290.3906 Q97.875 290.3906 102.375 294.8281 Q106.875 299.25 106.875 305.5781 Q106.875 311.9062 102.2969 316.3438 Q97.7344 320.7656 91.4062 320.7656 Q85.7812 320.7656 81.0625 315.9844 Q76.3594 311.2031 76.3594 305.5781 Q76.3594 298.5469 82.6875 293.2031 Q78.75 284.2031 71.2969 277.1719 L66.0938 280.6875 L66.0938 330.8906 Q84.0938 342 113.7656 360.9844 L262.125 360.9844 ZM74.1094 340.4531 L62.1562 333 L62.1562 278.5781 L68.2031 274.6406 Q58.6406 269.4375 49.0781 269.4375 Q27.1406 269.4375 27.1406 309.2344 Q27.1406 334.125 46.6875 355.5 Q57.5156 353.1094 62.0156 350.8594 Q68.2031 347.7656 74.1094 340.4531 Z" stroke="none"/></g></g></svg>
+                                                    </i>
+                                                    {{ product.category.friendly_name }}
                                                 </a>
                                             </p>
                                         {% endif %}
                                         {% if product.rating %}
                                             <small class="text-muted">
-                                                <i class="fa-star fas mr-1"></i>{{ product.rating }} / 5
+                                                <i class="fa-star fas mr-1 noi">
+                                                    &#11088;
+                                                </i>
+                                                {{ product.rating }} / 5
                                             </small>
                                         {% else %}
                                             <small class="text-muted">
@@ -156,7 +162,9 @@
 </div>
 <div class="border border-black btt-button rounded-0 shadow-sm">
     <a class="btt-link d-flex h-100">
-        <i class="fa-arrow-up fas mx-auto my-auto noi text-black">&#8657;</i>
+        <i class="fa-arrow-up fas mx-auto my-auto noi text-black">
+            &#8657;
+        </i>
     </a>
 </div>
 

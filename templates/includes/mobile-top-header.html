@@ -2,7 +2,9 @@
     <a aria-expanded="false" aria-haspopup="true" class="d-block d-lg-none nav-link text-block" data-toggle="dropdown" href="#" id="mobile-search">
         <div class="text-center">
             <div>
-                <i class="fa-lg fa-search fas"></i>
+                <i class="fa-lg fa-search fas noi">
+                    &#57344;
+                </i>
             </div>
             <p class="my-0">
                 Search
@@ -16,7 +18,9 @@
                 <div class="input-group-append">
                     <button class="border border-black btn btn-black form-control rounded-0" type="submit">
                         <span class="icon">
-                            <i class="fa-search fas"></i>
+                            <i class="fa-search fas noi">
+                                &#57344;
+                            </i>
                         </span>
                     </button>
                 </div>
@@ -28,7 +32,9 @@
     <a aria-expanded="false" aria-haspopup="true" class="d-block d-lg-none nav-link text-black" data-toggle="dropdown" href="#" id="user-options">
         <div class="text-center">
             <div>
-                <i class="fa-lg fa user fas"></i>
+                <i class="fa-lg fa user fas noi">
+                    &#128100;
+                </i>
             </div>
             <p class="my-0">
                 My account
@@ -63,7 +69,9 @@
     <a class="{% if grand_total %} font-weight-bold text-primary {% else %} text-black {% endif %} d-block d-lg-none nav-link" href="{% url 'view_bag' %}">
         <div class="text-center">
             <div>
-                <i class="fa-lg fa-shopping-bag fas"></i>
+                <i class="fa-lg fa-shopping-bag fas noi">
+                    &#128717;
+                </i>
             </div>
             <p class="my-0">
                 {% if grand_total %}
