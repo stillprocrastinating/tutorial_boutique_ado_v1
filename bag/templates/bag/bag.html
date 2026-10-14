@@ -80,7 +80,7 @@
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">
-                                        <form action="{% url 'adjust_view %'}" class="form update-form" method="POST">
+                                        <form action="{% url 'adjust_bag' %}" class="form update-form" method="POST">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -119,7 +119,7 @@
                                                 Update
                                             </small>
                                         </a>
-                                        <a class="float-right remove-item text-danger" data-size="{{ item.size }}" id="remove_{{ item.item_id }}">
+                                        <a class="float-right remove-item text-danger" data-product_size="{{ item.size }}" id="remove_{{ item.item_id }}">
                                             <small>
                                                 Remove
                                             </small>
@@ -225,9 +225,9 @@
 
             var csrfToken = "{{ csrf_token }}";
             var itemId = $(this).attr('id').split('remove_')[1];
-            var size = $(this).data('size');
-            var url = `/bag/remove/${itemId}`;
-            var data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+            var size = $(this).data('product_size');
+            var url = `/bag/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
 
             $.post(url, data)
             .done(function() {
