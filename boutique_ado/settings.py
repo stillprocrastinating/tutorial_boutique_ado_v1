@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-e18cuowmc3q+-=tx9ec%j(oywwqhmpxkj28f4d)($kdfd_tvl+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'https://fireship.dev/amiresponsive',]
 
 
 # Application definition
@@ -153,6 +153,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

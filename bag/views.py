@@ -1,4 +1,6 @@
-from django.shortcuts import HttpResponse, redirect, render, reverse
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
+from django.urls import reverse
 
 
 def view_bag(request):
@@ -59,8 +61,8 @@ def adjust_bag(request, item_id):
             bag[item_id]['items_by_size'][size] = quantity
         else:
             del bag[item_id]['items_by_size'][size]
-        if not bag[item_id]['items_by_size']:
-            bag.pop(item_id)
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
     else:
         if quantity > 0:
             bag[item_id] = quantity
