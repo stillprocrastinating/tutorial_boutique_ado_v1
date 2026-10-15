@@ -80,7 +80,7 @@
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">
-                                        <form action="{% url 'adjust_bag' %}" class="form update-form" method="POST">
+                                        <form action="{% url 'adjust_bag' item.item_id %}" class="form update-form" method="POST">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
