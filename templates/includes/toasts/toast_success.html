@@ -11,7 +11,70 @@
             </span>
         </button>
         <div class="bg-white toast-body">
-            {{ message }}
+            <div class="row">
+                <div class="col">
+                    {{ message }}
+                    <hr class="mb-3 mt-1">
+                </div>
+            </div>
+            {% if grand_total %}
+                <p class="bg-white logo-font py-1 text-black">
+                    Your bag ({{ product_count }})
+                </p>
+                <div class="bag-notification-wrapper">
+                    {% for item in bag_items %}
+                        <div class="row">
+                            <div class="col-3 my-1">
+                                <img alt="{{ item.product.name }}" class="w-100" src="{{ item.product.image.url }}">
+                            </div>
+                            <div class="col-9">
+                                <p class="my-0">
+                                    <strong>
+                                        {{ item.product.name }}
+                                    </strong>
+                                </p>
+                                <p class="my-0 small">
+                                    Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
+                                </p>
+                                <p class="my-0 small text-muted">
+                                    Qty: {{ item.quantity }}
+                                </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-1 mt-3 text-black">
+                            <strong>
+                                Total {% if free_delivery_delta > 0 %}(Excl. delivery){% endif %}:
+                                <span class="float-right">
+                                    ${{ total|floatformat:2 }}
+                                </span>
+                            </strong>
+                        </p>
+                        {% if free_delivery_delta > 0 %}
+                            <p class="bg-warning mb-0 p-2 shadow-sm text-black text-center">
+                                Spend 
+                                <strong>
+                                    ${{ free_delivery_delta }} 
+                                </strong>
+                                more to get free next day delivery!
+                            </p>
+                        {% endif %}
+                        <a class="btn btn-black btn-block rounded-0" href="{% url 'view_bag' %}">
+                            <span class="text-uppercase">
+                                Go to secure checkout
+                            </span>
+                            <span class="icon">
+                                <i class="fa-lock fas noi">
+                                    &#128274;
+                                </i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 </div>
